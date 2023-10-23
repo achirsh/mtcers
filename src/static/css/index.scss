@@ -1,0 +1,79 @@
+body {
+    color: #000;
+    font-size: 14px;
+    overflow: hidden;
+    margin: 0;
+    font-family: PingFang SC-Regular, PingFang SC;
+    position: relative;
+    background-color: #F4F5FA !important;
+}
+
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+textarea {
+    resize: none !important
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba($color: #000000, $alpha: 0);
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+p {
+    margin: 0;
+}
+
+ol, ul {
+    list-style: none !important;
+}
+
+ul {
+    padding-inline-start: 0 !important;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*
+ * 双击不选中文本
+*/
+.user-select-no {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* 滚动槽（轨道）宽高 */
+::-webkit-scrollbar {
+    display: none;
+    width: 0px !important;
+    /*对垂直流动条有效*/
+    height: 0px !important;
+    /*对水平流动条有效*/
+}
+
+/*定义两端按钮的样式*/
+::-webkit-scrollbar-button {
+    height: 0px;
+    width: 0px;
+    background-color: #fff;
+}
