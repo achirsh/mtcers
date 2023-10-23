@@ -4,12 +4,12 @@ import { useEffect } from 'react'
 
 const shopDatas = [
     {
-        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_01.jpeg',
+        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_01.png',
         text: '苹果成品账号',
         desc: '已购付费App的苹果账号'
     },
     {
-        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_02.jpeg',
+        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_02.png',
         text: '苹果空白账号',
         desc: '全球各国/地区苹果账号'
     }
