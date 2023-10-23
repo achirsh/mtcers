@@ -2,17 +2,14 @@ import { Modal, Card, Carousel } from 'antd'
 import styles from './index.module.scss'
 import { useEffect } from 'react'
 
-import shop_01 from '../../static/img/shop_01.png'
-import shop_02 from '../../static/img/shop_02.png'
-
 const shopDatas = [
     {
-        icon: shop_01,
+        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_01.jpeg',
         text: '苹果成品账号',
         desc: '已购付费App的苹果账号'
     },
     {
-        icon: shop_02,
+        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_02.jpeg',
         text: '苹果空白账号',
         desc: '全球各国/地区苹果账号'
     }
@@ -21,18 +18,18 @@ const shopDatas = [
 export default function Home() {
 
     useEffect(() => {
-        // Modal.info({
-        //     title: '购物须知',
-        //     content: (
-        //         <div>
-        //             <p>本站商品仅用于学习/游戏和测试，禁止用于任何违法行为！</p>
-        //             <h5>本站不接待上帝，买卖自愿/平等/互利，不接受请勿购买！</h5>
-        //             <h5>本站商品均有完整的介绍/使用教程/问题解答，购买请务必认真阅读</h5>
-        //         </div>
-        //     ),
-        //     onOk() {},
-        //     okText: '我知道了'
-        // });
+        Modal.info({
+            title: '购物须知',
+            content: (
+                <div>
+                    <p>本站商品仅用于学习/游戏和测试，禁止用于任何违法行为！</p>
+                    <h5>本站不接待上帝，买卖自愿/平等/互利，不接受请勿购买！</h5>
+                    <h5>本站商品均有完整的介绍/使用教程/问题解答，购买请务必认真阅读</h5>
+                </div>
+            ),
+            onOk() {},
+            okText: '我知道了'
+        });
     }, [])
 
     const carouselRender = () => {
