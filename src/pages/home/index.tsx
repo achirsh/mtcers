@@ -2,10 +2,6 @@ import { Modal, Card, Carousel } from 'antd'
 import styles from './index.module.scss'
 import { useEffect } from 'react'
 
-import swipe_01 from '../../static/img/swipe_01.jpeg'
-import swipe_02 from '../../static/img/swipe_02.jpeg'
-import swipe_03 from '../../static/img/swipe_03.jpeg'
-
 import shop_01 from '../../static/img/shop_01.png'
 import shop_02 from '../../static/img/shop_02.png'
 
@@ -42,9 +38,9 @@ export default function Home() {
     const carouselRender = () => {
         return (
             <Carousel autoplay>
-                <img alt='' src={swipe_01} className={styles.carousel} />
-                <img alt='' src={swipe_02} className={styles.carousel} />
-                <img alt='' src={swipe_03} className={styles.carousel} />
+                <img alt='' src='https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/swipe_01.jpeg' className={styles.carousel} />
+                <img alt='' src='https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/swipe_02.jpeg' className={styles.carousel} />
+                <img alt='' src='https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/swipe_03.jpeg' className={styles.carousel} />
             </Carousel>
         )
     }
