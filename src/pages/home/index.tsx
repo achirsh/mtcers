@@ -149,17 +149,17 @@ export default function Home() {
     const [select, setSelect] = useState<any>([])
 
     useEffect(() => {
-        // Modal.info({
-        //     title: '购物须知',
-        //     content: (
-        //         <div>
-        //             <p>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！</p>
-        //             <h5>本站不接待上帝，买卖自愿/平等/互利，非质量受损问题售出不退！</h5>
-        //         </div>
-        //     ),
-        //     onOk() {},
-        //     okText: '我知道了'
-        // });
+        Modal.info({
+            title: '购物须知',
+            content: (
+                <div>
+                    <p>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！</p>
+                    <h5>本站不接待上帝，买卖自愿/平等/互利，非质量受损问题售出不退！</h5>
+                </div>
+            ),
+            onOk() {},
+            okText: '我知道了'
+        });
     }, [])
 
     const carouselRender = () => {
@@ -231,14 +231,14 @@ export default function Home() {
                 onCancel={() => setModal(false)}
             >
                 <div className={styles.shopDetailModal}>
-                    {select.map((item, idx) => {
+                    {select.map((item: any, idx: number) => {
                         return (
                             <div key={`shopDetailModal-${idx}`} className={styles.shopDetailModalItem}>
                                 <div>{item.title}</div>
                                 <div className={styles.content}>
-                                    {item.items.map((n, i) => {
+                                    {item.items.map((n: any, i: number) => {
                                         return (
-                                            <div key={`items-${idx}`} className={styles.items}>
+                                            <div key={`items-${i}`} className={styles.items}>
                                                 <div>{n.title}</div>
                                                 <div>{n.desc}</div>
                                                 <div>{n.desc1}</div>
