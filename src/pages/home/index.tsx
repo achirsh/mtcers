@@ -12,32 +12,32 @@ import shop_04 from '../../static/img/shop_04.jpg'
 
 const shopDatas = [
     {
-        icon: shop_01,
+        icon: 'https://i.postimg.cc/yd1CSQhz/shop-01.jpg',
         text: '类目1:',
         desc: '苹果ID账号'
     },
     {
-        icon: shop_03,
+        icon: 'https://i.postimg.cc/yd1CSQhz/shop-03.jpg',
         text: '类目2:',
         desc: '科学上网工具'
     },
     {
-        icon: shop_04,
+        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
         text: '类目3:',
         desc: 'TikTok账号'
     },
     {
-        icon: shop_04,
+        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
         text: '类目4:',
         desc: 'TikTok增粉'
     },
     {
-        icon: shop_04,
+        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
         text: '类目5:',
         desc: 'TikTok小白直通车'
     },
     {
-        icon: shop_04,
+        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
         text: '类目6:',
         desc: 'TikTok爆款全攻略！《独家秘笈》'
     }
@@ -62,9 +62,9 @@ export default function Home() {
     const carouselRender = () => {
         return (
             <Carousel autoplay>
-                <img alt='' src={swipe_01} className={styles.carousel} />
-                <img alt='' src={swipe_02} className={styles.carousel} />
-                <img alt='' src={swipe_03} className={styles.carousel} />
+                <img alt='' src='https://i.postimg.cc/hvYk6KkS/swipe-01.jpg' className={styles.carousel} />
+                <img alt='' src='https://i.postimg.cc/hvYk6KkS/swipe-02.jpg' className={styles.carousel} />
+                <img alt='' src='https://i.postimg.cc/hvYk6KkS/swipe-03.jpg' className={styles.carousel} />
             </Carousel>
         )
     }
