@@ -2,14 +2,6 @@ import { Modal, Card, Carousel, Button } from 'antd'
 import styles from './index.module.scss'
 import { useEffect } from 'react'
 
-import swipe_01 from '../../static/img/swipe_01.jpeg'
-import swipe_02 from '../../static/img/swipe_02.jpeg'
-import swipe_03 from '../../static/img/swipe_03.jpeg'
-
-import shop_01 from '../../static/img/shop_01.png'
-import shop_03 from '../../static/img/shop_03.jpeg'
-import shop_04 from '../../static/img/shop_04.jpg'
-
 const shopDatas = [
     {
         icon: 'https://i.postimg.cc/yd1CSQhz/shop-01.jpg',
@@ -17,27 +9,27 @@ const shopDatas = [
         desc: '苹果ID账号'
     },
     {
-        icon: 'https://i.postimg.cc/yd1CSQhz/shop-03.jpg',
+        icon: 'https://i.postimg.cc/3Rt5jX90/shop-03.jpg',
         text: '类目2:',
         desc: '科学上网工具'
     },
     {
-        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
+        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
         text: '类目3:',
         desc: 'TikTok账号'
     },
     {
-        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
+        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
         text: '类目4:',
         desc: 'TikTok增粉'
     },
     {
-        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
+        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
         text: '类目5:',
         desc: 'TikTok小白直通车'
     },
     {
-        icon: 'https://i.postimg.cc/yd1CSQhz/shop-04.jpg',
+        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
         text: '类目6:',
         desc: 'TikTok爆款全攻略！《独家秘笈》'
     }
@@ -46,17 +38,17 @@ const shopDatas = [
 export default function Home() {
 
     useEffect(() => {
-        // Modal.info({
-        //     title: '购物须知',
-        //     content: (
-        //         <div>
-        //             <p>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！</p>
-        //             <h5>本站不接待上帝，买卖自愿/平等/互利，非质量受损问题售出不退！</h5>
-        //         </div>
-        //     ),
-        //     onOk() {},
-        //     okText: '我知道了'
-        // });
+        Modal.info({
+            title: '购物须知',
+            content: (
+                <div>
+                    <p>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！</p>
+                    <h5>本站不接待上帝，买卖自愿/平等/互利，非质量受损问题售出不退！</h5>
+                </div>
+            ),
+            onOk() {},
+            okText: '我知道了'
+        });
     }, [])
 
     const carouselRender = () => {
