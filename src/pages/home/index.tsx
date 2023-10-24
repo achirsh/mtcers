@@ -1,43 +1,70 @@
-import { Modal, Card, Carousel } from 'antd'
+import { Modal, Card, Carousel, Button } from 'antd'
 import styles from './index.module.scss'
 import { useEffect } from 'react'
 
+import swipe_01 from '../../static/img/swipe_01.jpeg'
+import swipe_02 from '../../static/img/swipe_02.jpeg'
+import swipe_03 from '../../static/img/swipe_03.jpeg'
+
+import shop_01 from '../../static/img/shop_01.png'
+import shop_03 from '../../static/img/shop_03.jpeg'
+import shop_04 from '../../static/img/shop_04.jpg'
+
 const shopDatas = [
     {
-        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_01.png',
-        text: '苹果成品账号',
-        desc: '已购付费App的苹果账号'
+        icon: shop_01,
+        text: '类目1:',
+        desc: '苹果ID账号'
     },
     {
-        icon: 'https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/shop_02.png',
-        text: '苹果空白账号',
-        desc: '全球各国/地区苹果账号'
+        icon: shop_03,
+        text: '类目2:',
+        desc: '科学上网工具'
+    },
+    {
+        icon: shop_04,
+        text: '类目3:',
+        desc: 'TikTok账号'
+    },
+    {
+        icon: shop_04,
+        text: '类目4:',
+        desc: 'TikTok增粉'
+    },
+    {
+        icon: shop_04,
+        text: '类目5:',
+        desc: 'TikTok小白直通车'
+    },
+    {
+        icon: shop_04,
+        text: '类目6:',
+        desc: 'TikTok爆款全攻略！《独家秘笈》'
     }
 ]
 
 export default function Home() {
 
     useEffect(() => {
-        Modal.info({
-            title: '购物须知',
-            content: (
-                <div>
-                    <p>本站商品仅用于学习/游戏和测试，禁止用于任何违法行为！</p>
-                    <h5>本站不接待上帝，买卖自愿/平等/互利，不接受请勿购买！</h5>
-                    <h5>本站商品均有完整的介绍/使用教程/问题解答，购买请务必认真阅读</h5>
-                </div>
-            ),
-            onOk() {},
-            okText: '我知道了'
-        });
+        // Modal.info({
+        //     title: '购物须知',
+        //     content: (
+        //         <div>
+        //             <p>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！</p>
+        //             <h5>本站不接待上帝，买卖自愿/平等/互利，非质量受损问题售出不退！</h5>
+        //         </div>
+        //     ),
+        //     onOk() {},
+        //     okText: '我知道了'
+        // });
     }, [])
 
     const carouselRender = () => {
         return (
             <Carousel autoplay>
-                <img alt='' src='https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/swipe_01.jpeg' className={styles.carousel} />
-                <img alt='' src='https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/swipe_02.jpeg' className={styles.carousel} />
-                <img alt='' src='https://raw.githubusercontent.com/achirsh/achirsh.github.io/master/images/mtcer/swipe_03.jpeg' className={styles.carousel} />
+                <img alt='' src={swipe_01} className={styles.carousel} />
+                <img alt='' src={swipe_02} className={styles.carousel} />
+                <img alt='' src={swipe_03} className={styles.carousel} />
             </Carousel>
         )
     }
@@ -50,12 +77,14 @@ export default function Home() {
                     marginTop: '20px'
                 }}
             >
-                <h3 style={{ marginTop: 0 }}>本站商品仅用于学习/游戏和测试，禁止用于任何违法行为！</h3>
+                <h3 style={{ marginTop: 0 }}>重要公告及免费帮助文档</h3>
                 <ul className={styles.ul1}>
-                    <li>1 本站仅出售对应账号，至于你用来下载什么App/下载的App如何使用，本站不做使用教学和服务！</li>
-                    <li>2 要购买具体商品请点击右下角聊天图标联系我哟！</li>
-                    <li>3 近期FaceTime诈骗频发，建议关闭FaceTime功能！</li>
+                    <li>1 本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！！！</li>
+                    <li>2 本站仅出售线上产品，至于你用来下载什么app、下载的app如何使用，本站不做无偿教学服务</li>
                 </ul>
+                <div style={{ textAlign: 'right' }}>
+                    <Button type='primary'>免费帮助文档</Button>
+                </div>
             </Card>
         )
     }
@@ -63,7 +92,7 @@ export default function Home() {
     const render2 = () => {
         return (
             <Card 
-                title="# 要来点什么"
+                title="商品选购区"
                 style={{
                     marginTop: '20px'
                 }}
