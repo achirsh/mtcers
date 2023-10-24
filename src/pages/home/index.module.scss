@@ -1,6 +1,8 @@
 .container {
     width: 100%;
+    height: 100%;
     padding: 16px;
+    overflow-y: auto;
 }
 
 .carousel {
@@ -40,6 +42,36 @@
 
         .desc {
             font-size: 12px;
+        }
+    }
+}
+
+.shopDetailModal {
+    width: 100%;
+
+    .shopDetailModalItem {
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .items {
+            width: 100%;
+            padding: 16px;
+            background-color: #fff;
+            box-shadow: 5px 10px 42px -15px rgba(0,0,0,0.15)!important;
+            border-radius: 15px;
+            margin-right: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            text-align: center;
+
+            img {
+                width: 123px;
+                height: 123px;
+            }
         }
     }
 }
