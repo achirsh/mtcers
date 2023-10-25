@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 const shopDatas = [
     {
-        icon: 'https://i.postimg.cc/yd1CSQhz/shop-01.jpg',
+        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_01.png',
         text: '类目1:',
         desc: '苹果ID账号',
         data: [
@@ -47,7 +47,7 @@ const shopDatas = [
     //     ]
     // },
     {
-        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
+        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
         text: '类目3:',
         desc: 'TikTok账号',
         data: [
@@ -83,7 +83,7 @@ const shopDatas = [
         ]
     },
     {
-        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
+        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
         text: '类目4:',
         desc: 'TikTok增粉',
         data: [
@@ -98,7 +98,7 @@ const shopDatas = [
         ]
     },
     {
-        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
+        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
         text: '类目5:',
         desc: 'TikTok小白直通车',
         data: [
@@ -121,7 +121,7 @@ const shopDatas = [
         ]
     },
     {
-        icon: 'https://i.postimg.cc/d3DM5hSH/shop-04.jpg',
+        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
         text: '类目6:',
         desc: 'TikTok爆款全攻略！《独家秘笈》',
         data: [
@@ -165,9 +165,9 @@ export default function Home() {
     const carouselRender = () => {
         return (
             <Carousel autoplay>
-                <img alt='' src='https://i.postimg.cc/hvYk6KkS/swipe-01.jpg' className={styles.carousel} />
-                <img alt='' src='https://i.postimg.cc/hvYk6KkS/swipe-02.jpg' className={styles.carousel} />
-                <img alt='' src='https://i.postimg.cc/hvYk6KkS/swipe-03.jpg' className={styles.carousel} />
+                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/swipe_01.jpeg' className={styles.carousel} />
+                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/swipe_02.jpeg' className={styles.carousel} />
+                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/swipe_03.jpeg' className={styles.carousel} />
             </Carousel>
         )
     }
