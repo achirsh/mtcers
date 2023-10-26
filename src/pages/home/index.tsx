@@ -192,6 +192,7 @@ export default function Home() {
                 <ul className={styles.ul1}>
                     <li>1 本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！！！</li>
                     <li>2 本站仅出售线上产品，至于你用来下载什么app、下载的app如何使用，本站不做无偿教学服务</li>
+                    <li>3 如需购买商品，请点击右下角的聊天按钮联系客服哟～</li>
                 </ul>
                 <div style={{ textAlign: 'right' }}>
                     <Button type='primary' onClick={() => {
