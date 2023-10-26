@@ -54,6 +54,7 @@
         .content {
             display: flex;
             flex-wrap: wrap;
+            position: relative;
         }
 
         .items {
@@ -66,12 +67,70 @@
             margin-top: 10px;
             margin-bottom: 10px;
             font-size: 12px;
-            text-align: center;
+            position: relative;
 
             img {
                 width: 123px;
                 height: 123px;
             }
         }
+
+        .title {
+            font-size: 14px;
+            font-family: HelveticaNeue-Medium, HelveticaNeue;
+            font-weight: 500;
+            color: #1B253B;
+            line-height: 14px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #19B4C9;
+        }
     }
+}
+
+.desc1 {
+    width: 75%;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.desc2 {
+    width: 75%;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.desc3 {
+    width: 75%;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 14px;
+    font-family: HelveticaNeue-Bold, HelveticaNeue;
+    font-weight: bold;
+    color: #1B253B;
+}
+
+.price1 {
+    text-decoration: line-through;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    color: #19B4C9;
+    opacity: .5;
+    font-size: 14px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
 }
