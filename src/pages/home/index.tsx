@@ -1,6 +1,7 @@
 import { Modal, Card, Carousel, Button } from 'antd'
 import styles from './index.module.scss'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const shopDatas = [
     {
@@ -132,6 +133,8 @@ const shopDatas = [
 ]
 
 export default function Home() {
+    const navigate = useNavigate()
+
     const [modal, setModal] = useState<boolean>(false)
     const [select, setSelect] = useState<any>([])
 
@@ -169,7 +172,8 @@ export default function Home() {
                 </ul>
                 <div className={styles.buttonMain}>
                     <Button type='primary' onClick={() => {
-                        window.open('https://www.yuque.com/jiaowoi/zq5em7/xhxgm3u6hhosg9k0?singleDoc# 《文章归档》')
+                        navigate('/iframe?url=https://www.yuque.com/jiaowoi/zq5em7/xhxgm3u6hhosg9k0?singleDoc# 《文章归档》')
+                        // window.open('https://www.yuque.com/jiaowoi/zq5em7/xhxgm3u6hhosg9k0?singleDoc# 《文章归档》')
                     }}>免费帮助文档</Button>
                 </div>
             </Card>

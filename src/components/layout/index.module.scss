@@ -1,0 +1,43 @@
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .content-bg {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .nav-bar-style {
+        background-color: #fff;
+        height: 45px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    // .body {
+    //     width: 100%;
+    //     height: calc(100% - 45px);
+    //     overflow: hidden;
+    //     margin-top: 45px;
+    // }
+
+
+    .body {
+        position: absolute;
+        left: 0;
+        top: 45px;
+        width: 100%;
+        height: calc(100% - 45px);
+        overflow: hidden;
+    }
+}
