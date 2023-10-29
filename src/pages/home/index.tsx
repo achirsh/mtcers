@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 const shopDatas = [
     {
         icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_01.png',
-        text: '类目1:',
+        text: '类目1',
         desc: '苹果ID账号',
         data: [
             {
@@ -23,32 +23,9 @@ const shopDatas = [
             }
         ]
     },
-    // {
-    //     icon: 'https://i.postimg.cc/3Rt5jX90/shop-03.jpg',
-    //     text: '类目2:',
-    //     desc: '安全上网工具使用权',
-    //     data: [
-    //         {
-    //             title: '【美国】使用权',
-    //             items: [
-    //                 { title: '产品编号-07:', desc: '使用期1个月', price: '¥：140' },
-    //                 { title: '产品编号-08:', desc: '使用期3个月', price: '¥：199' },
-    //                 { title: '产品编号-09:', desc: '使用期半年', price: '¥：310' },
-    //             ]
-    //         },
-    //         {
-    //             title: '【亚洲】使用权',
-    //             items: [
-    //                 { title: '产品编号-10:', desc: '使用期1个月', price: '¥：140' },
-    //                 { title: '产品编号-11:', desc: '使用期3个月', price: '¥：199' },
-    //                 { title: '产品编号-12:', desc: '使用期半年', price: '¥：310' },
-    //             ]
-    //         }
-    //     ]
-    // },
     {
         icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
-        text: '类目3:',
+        text: '类目2',
         desc: 'TikTok账号',
         data: [
             {
@@ -83,8 +60,8 @@ const shopDatas = [
         ]
     },
     {
-        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
-        text: '类目4:',
+        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/R.jpg',
+        text: '类目3',
         desc: 'TikTok增粉',
         data: [
             {
@@ -99,7 +76,7 @@ const shopDatas = [
     },
     {
         icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
-        text: '类目5:',
+        text: '类目4',
         desc: 'TikTok小白直通车',
         data: [
             {
@@ -122,8 +99,10 @@ const shopDatas = [
     },
     {
         icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
-        text: '类目6:',
-        desc: 'TikTok爆款全攻略！《独家秘笈》',
+        text: '类目5',
+        desc: 'TikTok爆款全攻略！',
+        desc1: '《独家秘笈》',
+        desc2: '秘籍*仅售站内伙伴，站外概不外传',
         data: [
             {
                 title: 'TikTok爆款实操攻略！全网一流独家秘籍',
@@ -172,29 +151,23 @@ export default function Home() {
 
     const carouselRender = () => {
         return (
-            <Carousel autoplay>
-                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/swipe_01.jpeg' className={styles.carousel} />
-                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/swipe_02.jpeg' className={styles.carousel} />
-                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/swipe_03.jpeg' className={styles.carousel} />
+            <Carousel autoplay style={{ marginTop: '15px' }}>
+                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/banner01.png' className={styles.carousel} />
+                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/banner02.png' className={styles.carousel} />
+                <img alt='' src='https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/banner03.png' className={styles.carousel} />
             </Carousel>
         )
     }
     
     const render1 = () => {
         return (
-            <Card 
-                title="# 公告及联系"
-                style={{
-                    marginTop: '20px'
-                }}
-            >
-                <h3 style={{ marginTop: 0 }}>重要公告及免费帮助文档</h3>
+            <Card bodyStyle={{ padding: '10px' }}>
+                <div className={styles.cardTitle}>重要公告及免费帮助文档</div>
                 <ul className={styles.ul1}>
-                    <li>1 本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！！！</li>
-                    <li>2 本站仅出售线上产品，至于你用来下载什么app、下载的app如何使用，本站不做无偿教学服务</li>
-                    <li>3 如需购买商品，请点击右下角的聊天按钮联系客服哟～</li>
+                    <li>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！！！</li>
+                    <li>本站仅出售线上产品，至于你用来下载什么app、下载的app如何使用，本站不做无偿教学服务</li>
                 </ul>
-                <div style={{ textAlign: 'right' }}>
+                <div className={styles.buttonMain}>
                     <Button type='primary' onClick={() => {
                         window.open('https://www.yuque.com/jiaowoi/zq5em7/xhxgm3u6hhosg9k0?singleDoc# 《文章归档》')
                     }}>免费帮助文档</Button>
@@ -205,29 +178,28 @@ export default function Home() {
 
     const render2 = () => {
         return (
-            <Card 
-                title="商品选购区"
-                style={{
-                    marginTop: '20px'
-                }}
-            >
-                <div className={styles.cardContent}>
-                    {shopDatas.map((item, idx) => {
-                        return (
-                            <div key={`shop-data-${idx}`} className={styles.shopItem} onClick={() => {
-                                setModal(true)
-                                setSelect(item.data)
-                            }}>
+            <div className={styles.cardContent}>
+                {shopDatas.map((item, idx) => {
+                    return (
+                        <div key={`shop-data-${idx}`} className={`${styles.shopItem} ${item.text === '类目5' && styles.shopItem1}`} onClick={() => {
+                            setModal(true)
+                            setSelect(item.data)
+                        }} style={{
+                            width: item.text === '类目5' ? '100%' : 'calc(50% - 5px)',
+                        }}>
+                            <div className={styles.title}>{item.text}</div>
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <img alt='' src={item.icon} />
                                 <div>
-                                    <div className={styles.title}>{item.text}</div>
                                     <div className={styles.desc}>{item.desc}</div>
+                                    <div className={styles.desc}>{item.desc1}</div>
                                 </div>
                             </div>
-                        )
-                    })}
-                </div>
-            </Card>
+                            <div className={styles.desc4}>{item.desc2}</div>
+                        </div>
+                    )
+                })}
+            </div>
         )
     }
 
@@ -270,8 +242,13 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
-            {carouselRender()}
             {render1()}
+            {carouselRender()}
+            <div className={styles.title2}>
+                <img alt='' src={'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/arrow_bottom.svg'} />
+                <span>商品选购区</span>
+                <img alt='' src={'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/arrow_bottom.svg'} />
+            </div>
             {render2()}
             {shopDetailModal()}
         </div>

@@ -5,14 +5,52 @@
     overflow-y: auto;
 }
 
+.cardTitle {
+    font-family: alimamafangyuanti;
+    color: #3670ee;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .carousel {
     border-radius: 10px;
+    height: 100px;
+}
+
+.ul1 {
+    margin-block-start: 5px;
+    font-family: alimamafangyuanti;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
 }
 
 .ul1 li {
     line-height: 24px;
     text-indent: 16px;
     margin-bottom: 5px;
+    position: relative;
+    font-family: alimamafangyuanti;
+}
+
+.ul1 li::after {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #000;
+}
+
+.buttonMain {
+    text-align: right;
+
+    button {
+        border-radius: 30px;
+        font-family: alimamafangyuanti;
+    }
 }
 
 .cardContent {
@@ -21,14 +59,19 @@
     flex-wrap: wrap;
 
     .shopItem {
+        width: calc(50% - 5px);
         box-shadow: 0px 0px 10px 5px rgba(199,199,199,0.1);
         border: 3px solid transparent;
-        border-radius: 15px;
-        padding: 8px 12px;
-        margin: 0 12px 8px 0;
+        border-radius: 5px;
+        padding: 8px;
+        margin-bottom: 8px;
         background-color: #fff;
-        display: inline-flex;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-family: alimamafangyuanti;
 
         img {
             width: 35px;
@@ -38,12 +81,25 @@
         }
 
         .title {
-            font-weight: bold;
+            font-size: 12px;
+            color: #a6a6a6;
+            font-family: alimamafangyuanti;
+            margin-bottom: 10px;
         }
 
         .desc {
-            font-size: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: alimamafangyuanti;
         }
+    }
+
+    .shopItem:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .shopItem1 {
+        margin-right: 0;
     }
 }
 
@@ -69,6 +125,7 @@
             margin-bottom: 10px;
             font-size: 12px;
             position: relative;
+            font-family: alimamafangyuanti;
 
             img {
                 width: 123px;
@@ -78,7 +135,7 @@
 
         .title {
             font-size: 14px;
-            font-family: HelveticaNeue-Medium, HelveticaNeue;
+            font-family: alimamafangyuanti;
             font-weight: 500;
             color: #1B253B;
             line-height: 14px;
@@ -93,7 +150,7 @@
             display: flex;
             align-items: center;
             font-size: 14px;
-            font-family: PingFangSC-Medium, PingFang SC;
+            font-family: alimamafangyuanti;
             font-weight: 500;
             color: #19B4C9;
         }
@@ -104,22 +161,32 @@
     width: 75%;
     overflow: hidden;
     margin-bottom: 5px;
+    font-family: alimamafangyuanti;
 }
 
 .desc2 {
     width: 75%;
     overflow: hidden;
     margin-bottom: 5px;
+    font-family: alimamafangyuanti;
 }
 
 .desc3 {
     width: 75%;
     overflow: hidden;
+    font-family: alimamafangyuanti;
+}
+
+.desc4 {
+    font-size: 12px;
+    color: #a6a6a6;
+    margin-top: 10px;
+    font-family: alimamafangyuanti;
 }
 
 .title1 {
     font-size: 14px;
-    font-family: HelveticaNeue-Bold, HelveticaNeue;
+    font-family: alimamafangyuanti;
     font-weight: bold;
     color: #1B253B;
 }
@@ -134,4 +201,22 @@
     font-size: 14px;
     font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 500;
+    font-family: alimamafangyuanti;
+}
+
+.title2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: alimamafangyuanti;
+    color: #3670ee;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+
+    img {
+        height: 20px;
+        margin: 0 10px;
+    }
 }
