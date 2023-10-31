@@ -2,135 +2,7 @@ import { Modal, Card, Carousel, Button } from 'antd'
 import styles from './index.module.scss'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-const shopDatas = [
-    {
-        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_01.png',
-        text: '类目1',
-        desc: '苹果ID账号',
-        data: [
-            {
-                title: '购买【成品账号】产品',
-                items: [
-                    { title: '产品编号-01:', desc: '美国ID+安全上网工具', price: '¥：80' },
-                ]
-            },
-            {
-                title: '购买【空白账号】产品',
-                items: [
-                    { title: '产品编号-02:', desc: '亚洲地区ID', price: '¥：13' },
-                    { title: '产品编号-03:', desc: '美国ID', price: '¥：13' },
-                ]
-            }
-        ]
-    },
-    {
-        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
-        text: '类目2',
-        desc: 'TikTok账号',
-        data: [
-            {
-                title: 'TikTok【美国】账号',
-                items: [
-                    { title: '产品编号-04:', desc: '0粉丝账号', price: '¥：10' },
-                    { title: '产品编号-05:', desc: '1000粉丝号', price: '¥：75' },
-                    { title: '产品编号-06:', desc: '5000粉丝号', price: '¥：290' },
-                ]
-            },
-            {
-                title: 'TikTok【泰国】账号',
-                items: [
-                    { title: '产品编号-07:', desc: '0粉丝账号', price: '¥：10' },
-                    { title: '产品编号-08:', desc: '1000粉丝号', price: '¥：70' },
-                ]
-            },
-            {
-                title: 'TikTok【马来西亚】账号',
-                items: [
-                    { title: '产品编号-09:', desc: '0粉丝账号', price: '¥：10' },
-                    { title: '产品编号-10:', desc: '1000粉丝号', price: '¥：70' },
-                ]
-            },
-            {
-                title: 'TikTok【菲律宾】账号',
-                items: [
-                    { title: '产品编号-11:', desc: '0粉丝账号', price: '¥：10' },
-                    { title: '产品编号-12:', desc: '1000粉丝号', price: '¥：70' },
-                ]
-            }
-        ]
-    },
-    {
-        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/R.jpg',
-        text: '类目3',
-        desc: 'TikTok增粉',
-        data: [
-            {
-                items: [
-                    { title: '产品编号-13:', desc: 'TikTok【美国账号】增粉', price: '¥：1000粉/39' },
-                    { title: '产品编号-14:', desc: 'TikTok【泰国账号】增粉', price: '¥：1000粉/30' },
-                    { title: '产品编号-15:', desc: 'TikTok【菲律宾账号】增粉', price: '¥：1000粉/30' },
-                    { title: '产品编号-16:', desc: 'TikTok【马来西亚账号】增粉', price: '¥：1000粉/30' },
-                ]
-            },
-        ]
-    },
-    {
-        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
-        text: '类目4',
-        desc: 'TikTok小白直通车',
-        data: [
-            {
-                title: 'TikTok「 美国苹果ID + 安全上网工具 + TikTok账号 」 小白直通车',
-                items: [
-                    { title: '产品编号-17:', desc: '美国苹果ID+安全上网工具+美国TikTok账号', price: '¥：160' },
-                    { title: '产品编号-18:', desc: '美国苹果ID+安全上网工具+美国TikTok账号', price: '¥：220' },
-                    { title: '产品编号-19:', desc: '美国苹果ID+安全上网工具+美国TikTok账号', price: '¥：330' },
-                ]
-            },
-            {
-                title: 'TikTok「 美国苹果ID + 安全上网工具 + TikTok账号 + 实物设备 」 小白直通车',
-                items: [
-                    { title: '产品编号-20:', desc: '美国苹果ID+安全上网工具+TikTok全新账号+配置完毕iPhone7', price: '¥：1340' },
-                    { title: '产品编号-21:', desc: '美国苹果ID+安全上网工具+TikTok全新账号+配置完毕iPhone7', price: '¥：1480' },
-                    { title: '产品编号-22:', desc: '美国苹果ID+安全上网工具+TikTok全新账号+配置完毕iPhone7', price: '¥：1540' },
-                ]
-            },
-        ]
-    },
-    {
-        icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
-        text: '类目5',
-        desc: 'TikTok爆款全攻略！',
-        desc1: '《独家秘笈》',
-        desc2: '秘籍*仅售站内伙伴，站外概不外传',
-        data: [
-            {
-                title: 'TikTok爆款实操攻略！全网一流独家秘籍',
-                items: [
-                    { title: '产品编号-23:', desc: '《福利：多方位认识TikTok》', desc1: '引言：走近TikTok，解锁认知',  price: '¥：5.93' },
-                    { title: '产品编号-24:', desc: '《保姆级教程：手把手教你TikTok正确打开方式》', desc1: '引言：科学上网，稳定畅玩', price: '¥：29.9' },
-                    { title: '产品编号-25:', desc: '《涨粉绝技：3天破万粉》', desc1: '引言：大咖亲测有效，不保障100%', price: '¥：49.3' },
-                    { title: '产品编号-26:', desc: '《营业：TikTok开一家属于自己的店铺》', desc1: '引言：今天做老板，明天炒老板', price: '¥：49.9' },
-                    { title: '产品编号-27:', desc: '《TikTok帮手：大神们压箱底的工具》', desc1: '引言：小白快速上手出作品', price: '¥：34.9' },
-                    { title: '产品编号-28:', desc: '《没感情的剪视频机器：高效视频制作流程》', desc1: '引言：大咖亲测有效，不保障100%', price: '¥：69.9' },
-                    { title: '产品编号-29:', desc: '《怎么搞内容：电脑剪辑大神制作流程》', desc1: '引言：PR用户可使用', price: '¥：49.9' },
-                    { title: '产品编号-30:', desc: '《怎么发货：物流及现代化管理方式》', desc1: '引言：电商人的必备素养', price: '¥：59.9' },
-                    { title: '产品编号-31:', desc: '《事半功倍：选品的变现窍门》', desc1: '引言：选对货品，成功一半', price: '¥：99.9' },
-                    { title: '产品编号-32:', desc: '《超细致：高能讲解如何带货》', desc1: '引言：选对方法，出海淘金', price: '¥：119' },
-                    { 
-                        title: '产品编号-33:', 
-                        desc: '《推开世界的门，TikTok爆款实操攻略》', 
-                        desc1: '打包放送，诚意之作！华丽转身拿成果', 
-                        desc2: '10节课掌握TikTok核心玩法（包含上方所有课程）', 
-                        price1: '¥：573.53',
-                        price: '¥：413.9' 
-                    },
-                ]
-            },
-        ]
-    }
-]
+import { shopDatas } from '../../config'
 
 export default function Home() {
     const navigate = useNavigate()
@@ -186,8 +58,9 @@ export default function Home() {
                 {shopDatas.map((item, idx) => {
                     return (
                         <div key={`shop-data-${idx}`} className={`${styles.shopItem} ${item.text === '类目5' && styles.shopItem1}`} onClick={() => {
-                            setModal(true)
-                            setSelect(item.data)
+                            // setModal(true)
+                            // setSelect(item.data)
+                            navigate(`/detail/${item.id}`)
                         }} style={{
                             width: item.text === '类目5' ? '100%' : 'calc(50% - 5px)',
                         }}>

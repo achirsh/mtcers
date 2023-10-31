@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
 import Home from '../pages/home'
 import Iframe from '../pages/doc'
+import Detail from '../pages/detail'
 
 export const router = createBrowserRouter(
     [
@@ -18,6 +19,13 @@ export const router = createBrowserRouter(
                 {
                     path: 'iframe',
                     Component: Iframe,
+                    loader: async () => {
+                        return []
+                    },
+                },
+                {
+                    path: 'detail/:id',
+                    Component: Detail,
                     loader: async () => {
                         return []
                     },
