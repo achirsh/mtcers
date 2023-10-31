@@ -18,7 +18,9 @@ export default function Detail() {
         navBarLeftClick: () => {
             navigate('/#', { replace: true })
         },
-        bodyStyle: {paddingBottom: '50px'}
+        bodyStyle: {
+            height: 'calc(100% - 110px)'
+        }
     }
 
     useEffect(() => {
@@ -63,7 +65,8 @@ export default function Detail() {
                                             <span>编号-</span>
                                             <span>{n.title}</span>
                                         </div>
-                                        <div className={styles.desc}>{n.desc}</div>
+                                        <div className={styles.desc}>{n?.desc}</div>
+                                        {n.desc11 && <div className={styles.desc}>{n?.desc11}</div>}
                                         <div className={styles.price}>
                                             <span>¥：</span>
                                             <span>{n.price}</span>
@@ -110,8 +113,7 @@ export default function Detail() {
                 item?.id === '2' &&
                 <div className={styles.idtwo}>
                     <div>确认账号无误之后请修改邮箱、登录密码等信息，否则账号丢失自行承担后果</div>
-                    <div>美国账号一天内没改用户名、邮箱、登录密码就被封了，，无偿给换下单同等价值新号</div>
-                    <span>（正常换头像和发视频的也可以换，只要没有改用户名、邮箱和登录密码）</span>
+                    <div>美国账号一天内没改用户名、邮箱、登录密码就被封了，无偿给换下单同等价值新号（正常换头像和发视频的也可以换，只要没有改用户名、邮箱和登录密码）</div>
                     <div>账号出售不包小黄车，科学上网，文明使用，持续稳定</div>
 
                     <div className={styles.tishidesc}>
