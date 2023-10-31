@@ -1,14 +1,11 @@
-import { Modal, Card, Carousel, Button } from 'antd'
+import { Card, Carousel, Button } from 'antd'
 import styles from './index.module.scss'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { shopDatas } from '../../config'
 
 export default function Home() {
     const navigate = useNavigate()
-
-    const [modal, setModal] = useState<boolean>(false)
-    const [select, setSelect] = useState<any>([])
 
     useEffect(() => {
         // Modal.info({
@@ -80,43 +77,6 @@ export default function Home() {
         )
     }
 
-    // 商品详情弹窗
-    const shopDetailModal = () => {
-        return (
-            <Modal 
-                title="商品列表" 
-                open={modal} 
-                footer={null}
-                style={{ top: 20 }}
-                onCancel={() => setModal(false)}
-            >
-                <div className={styles.shopDetailModal}>
-                    {select.map((item: any, idx: number) => {
-                        return (
-                            <div key={`shopDetailModal-${idx}`} className={styles.shopDetailModalItem}>
-                                <div className={styles.title1}>{item.title}</div>
-                                <div className={styles.content}>
-                                    {item.items.map((n: any, i: number) => {
-                                        return (
-                                            <div key={`items-${i}`} className={styles.items}>
-                                                <div className={styles.title}>{n.title}</div>
-                                                <div className={styles.desc1}>{n.desc}</div>
-                                                <div className={styles.desc2}>{n.desc1}</div>
-                                                <div className={styles.desc3}>{n.desc2}</div>
-                                                <div className={styles.price1}>{n.price1}</div>
-                                                <div className={styles.price}>{n.price}</div>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-            </Modal>
-        )
-    }
-
     return (
         <div className={styles.container}>
             {render1()}
@@ -127,7 +87,6 @@ export default function Home() {
                 <img alt='' src={'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/arrow_bottom.svg'} />
             </div>
             {render2()}
-            {shopDetailModal()}
         </div>
     )
 }

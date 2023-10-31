@@ -39,7 +39,7 @@ export default function Detail() {
                 </div>
             </div>
             {item?.desc1 && <div className={styles.itemTitle1}>{item?.desc1}</div>}
-            {item && item.data.map((item1, idx) => {
+            {item && item.data.map((item1: any, idx: number) => {
                 return (
                     <div key={`data-${idx}`} className={styles.itemData}>
                         {
@@ -53,7 +53,7 @@ export default function Detail() {
                         <div className={styles.itemContent}  style={{
                             flexDirection: item1.type === 'cross' ? 'row' : 'column'
                         }}>
-                            {item1.items.map((n, i) => {
+                            {item1.items.map((n: any, i: number) => {
                                 return (
                                     <div key={`n-${i}`} className={styles.nItem} style={{
                                         flexDirection: n.type === 'cross' ? 'row' : 'column'
