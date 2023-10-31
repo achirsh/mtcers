@@ -1,4 +1,4 @@
-import { Card, Carousel, Button } from 'antd'
+import { Card, Carousel, Button, Modal } from 'antd'
 import styles from './index.module.scss'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -8,17 +8,17 @@ export default function Home() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        // Modal.info({
-        //     title: '购物须知',
-        //     content: (
-        //         <div>
-        //             <p>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！</p>
-        //             <h5>本站不接待上帝，买卖自愿/平等/互利，非质量受损问题售出不退！</h5>
-        //         </div>
-        //     ),
-        //     onOk() {},
-        //     okText: '我知道了'
-        // });
+        Modal.info({
+            title: '购物须知',
+            content: (
+                <div>
+                    <p>本站商品仅用于学习、测试及跨境电商服务，严禁用于任何违法行为！</p>
+                    <h5>本站不接待上帝，买卖自愿/平等/互利，非质量受损问题售出不退！</h5>
+                </div>
+            ),
+            onOk() {},
+            okText: '我知道了'
+        });
     }, [])
 
     const carouselRender = () => {
