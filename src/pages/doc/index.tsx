@@ -10,7 +10,7 @@ export default function ComplaintsPage(): JSX.Element {
         title: '免费帮助文档',
         backArrow: true,
         navBarLeftClick: () => {
-            navigate('/', { replace: true })
+            navigate('/#', { replace: true })
         }
     }
 

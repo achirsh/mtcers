@@ -76,9 +76,13 @@
 
     .title {
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
 
         span:nth-child(2) {
             color: #3670ef;
+            display: inline-block;
+            margin-top: 1px;
         }
     }
 
@@ -114,7 +118,6 @@
     bottom: 10px;
     font-family: alimamafangyuanti;
     font-size: 16px;
-    font-weight: bold;
     background-color: #fff;
 
     .arrow {
@@ -176,4 +179,88 @@
     100%{
         transform: rotate(0);
     }
+}
+
+.idone {
+    width: 100%;
+    padding: 0 20px;
+    font-family: alimamafangyuanti;
+    font-size: 18px;
+    line-height: 24px;
+
+    .tishidesc {
+        width: 100%;
+        padding: 20px;
+        border: 1px dashed #999;
+        border-radius: 10px;
+        margin-top: 10px;
+        color: #999;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.idtwo {
+    width: 100%;
+    padding: 0 20px;
+    font-family: alimamafangyuanti;
+    font-size: 18px;
+    line-height: 24px;
+
+    div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4) {
+        text-indent: 38px;
+        position: relative;
+    }
+
+    div:nth-child(1)::after, div:nth-child(2)::after, div:nth-child(3)::after, div:nth-child(4)::after {
+        width: 3px;
+        height: 3px;
+        background-color: #000;
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 8px;
+        border-radius: 3px;
+    }
+
+    .tishidesc {
+        width: 100%;
+        padding: 20px;
+        border: 1px dashed #999;
+        border-radius: 10px;
+        margin-top: 20px;
+        color: #999;
+    }
+}
+
+.idthree {
+    width: 100%;
+    padding: 0 20px;
+    font-family: alimamafangyuanti;
+    font-size: 18px;
+    line-height: 24px;
+
+    div:nth-child(1) {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .tishidesc {
+        width: 100%;
+        padding: 20px;
+        border: 1px dashed #999;
+        border-radius: 10px;
+        margin-top: 10px;
+        color: #999;
+    }
+}
+
+.shuoming {
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-family: alimamafangyuanti;
 }

@@ -49,14 +49,14 @@ const shopDatas = [
         icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/shop_04.jpg',
         text: '类目2',
         desc: 'TikTok账号',
-        desc1: '#走进歪果仁的世界',
+        desc1: '#走近歪果仁的世界',
         data: [
             {
                 title: '🇺🇸美国账号',
                 type: 'vertical',
                 items: [
                     { title: '04：', desc: '0粉丝账号，', price: '10元', type: 'cross', },
-                    { title: '05：', desc: '1000粉丝号，', price: '75元', type: 'cross', },
+                    { title: '05：', desc: '1000粉丝号，', price: '75元', type: 'cross', recommended: '推荐!', },
                     { title: '06：', desc: '5000粉丝号，', price: '290元', type: 'cross', },
                 ]
             },
@@ -91,12 +91,13 @@ const shopDatas = [
         icon: 'https://pub-82355d939751402182e1cc721dccbb3c.r2.dev/R.jpg',
         text: '类目3',
         desc: 'TikTok增粉',
+        shuoming: '说明：最低1000粉才能下单哟',
         data: [
             {
                 title: '🇺🇸美国账号增粉',
                 type: 'vertical',
                 items: [
-                    { title: '13', price: '1000粉/39元', type: 'cross', center: true, },
+                    { title: '13', price: '1000粉/39元', type: 'cross', center: true, recommended: '推荐!', },
                 ]
             },
             {
