@@ -61,15 +61,14 @@ export default function Home() {
                         }} style={{
                             width: item.text === '类目5' ? '100%' : 'calc(50% - 5px)',
                         }}>
-                            <div className={styles.title}>{item.text}</div>
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <img alt='' src={item.icon} />
                                 <div>
+                                    <div className={styles.title}>{item.text}</div>
                                     <div className={styles.desc}>{item.desc}</div>
-                                    <div className={styles.desc}>{item.desc1}</div>
                                 </div>
                             </div>
-                            <div className={styles.desc4}>{item.desc2}</div>
+                            {item.desc2 && <div className={styles.desc4}>{item.desc2}</div>}
                         </div>
                     )
                 })}

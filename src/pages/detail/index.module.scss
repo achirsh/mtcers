@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    font-family: alimamafangyuanti;
 }
 
 .shopItem {
@@ -25,7 +26,6 @@
     }
 
     .desc {
-        font-weight: bold;
         font-size: 14px;
         font-family: alimamafangyuanti;
     }
@@ -39,12 +39,10 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-family: alimamafangyuanti;
-    font-weight: bold;
 
     .itemTitle {
-        text-align: center;
         font-size: 18px;
         margin-bottom: 15px;
         display: flex;
@@ -70,10 +68,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 18px;
-    justify-content: center;
-    margin-bottom: 10px;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 5px;
     position: relative;
+    font-family: alimamafangyuanti;
 
     .title {
         margin-bottom: 10px;
@@ -84,11 +83,11 @@
     }
 
     .desc {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .price {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
 
         span:nth-child(2) {
             color: #3670ef;
@@ -96,14 +95,16 @@
     }
 
     .recommended {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         font-size: 20px;
         color: #d9a757;
+        position: relative;
     }
 
     .desc1 {
         color: #a6a6a6;
-        font-size: 12px;
+        font-size: 16px;
+        font-family: alimamafangyuanti;
     }
 }
 
@@ -112,7 +113,7 @@
     right: 140px;
     bottom: 10px;
     font-family: alimamafangyuanti;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     background-color: #fff;
 
@@ -128,14 +129,16 @@
     text-align: center;
     font-size: 40px;
     margin-top: -20px;
+    margin-bottom: 10px;
+    font-family: alimamafangyuanti;
 }
 
 .tuijian {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    right: 0;
-    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    right: -40px;
+    top: -5px;
     animation: first 1.5s linear infinite;
 }
 
